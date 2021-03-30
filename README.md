@@ -1,4 +1,4 @@
-## RabbitMQ Handson
+## RabbitMQ Hands on
 
 Goal of this project is to get from the ground up experience with RabbitMQ and not leveraging existing frameworks which has been my past experience with organisations I have worked in.
 
