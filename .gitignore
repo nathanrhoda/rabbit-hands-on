@@ -3,3 +3,12 @@
 ################################################################################
 
 /src/Bank/.vs/Bank/v16
+/src/Bank/Bank.Api/obj
+/src/Bank/AccountsHost/bin/Debug
+/src/Bank/AccountsHost/obj
+/src/Bank/Bank.Api/bin/Debug/net5.0
+/src/Bank/RabbitMQ.Core/obj
+*.user
+/src/Bank/.vs/Bank/DesignTimeBuild
+/src/Bank/WithDrawalHost/bin/Debug/netcoreapp3.1
+/src/Bank/WithDrawalHost/obj
