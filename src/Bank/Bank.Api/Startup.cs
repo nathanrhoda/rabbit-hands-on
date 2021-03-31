@@ -23,7 +23,7 @@ namespace Bank.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to add services to the container.t
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -31,17 +31,9 @@ namespace Bank.Api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Bank.Api", Version = "v1" });
-            });
+            });          
 
-            //services.AddMassTransit(mt =>
-            //{
-            //    mt.UsingRabbitMq((context, cfg) =>
-            //    {
-            //        cfg.Host("rabbitmq://localhost/");                   
-            //    });
-
-            //    mt.UsingRabbitMq();
-            //});
+            //TODO Addconfig to wire up masstransit with saga's defined
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

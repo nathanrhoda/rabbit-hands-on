@@ -12,3 +12,5 @@
 /src/Bank/.vs/Bank/DesignTimeBuild
 /src/Bank/WithDrawalHost/bin/Debug/netcoreapp3.1
 /src/Bank/WithDrawalHost/obj
+/src/Bank/Bank.Sagas/bin/Debug/netstandard2.0
+/src/Bank/Bank.Sagas/obj
