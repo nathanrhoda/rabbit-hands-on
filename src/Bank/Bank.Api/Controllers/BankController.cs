@@ -11,7 +11,7 @@ namespace Bank.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BankController : ControllerBase
+    public class BankController : BaseControllerWithRabbit
     {
 
         [HttpPost("account")]
@@ -30,36 +30,6 @@ namespace Bank.Api.Controllers
             return Ok(response);
         }
 
-        private static string SendMessage(string message, string queue)
-        {
-            var response = "Message Not Sent";
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare
-                    (
-                        queue: queue,
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null
-                    );
-
-                var body = Encoding.UTF8.GetBytes(message);
-
-                channel.BasicPublish
-                    (
-                        exchange: "",
-                        routingKey: queue,
-                        basicProperties: null,
-                        body: body
-                    );
-                response = "Message Sent";
-                Console.WriteLine($"{response} : {message}");
-            }
-
-            return response;
-        }
+        
     }
 }
